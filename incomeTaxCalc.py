@@ -38,10 +38,12 @@ DEPENDENT_DEDUCTION = 3000.00
 
 
 # Request the inputs from user 
-
-
+grossIncome = float(input("Enter the gross income: ")) #w/o conversion to data, it's only a string
+numDependents = int(input("Enter the nymber of dependents: "))
 
 # Compute the income tax
-
+taxableIncome = grossIncome - STANDARD_DEDUCTION - DEPENDENT_DEDUCTION * numDependents
+incomeTax = taxableIncome * TAX_RATE
 
 # Display the income tax 
+print("Your Income Tax is, based on your taxable income of",taxableIncome, "is",incomeTax, ".")
